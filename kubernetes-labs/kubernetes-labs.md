@@ -21,3 +21,7 @@
 16. [Minikube installation](./minikube_installation_and_intro_k8s/K8s_Installation.md)
 17. [Kubernetes Architecture](./minikube_installation_and_intro_k8s/K8s_architecture.md)
 18. [Kubernetes Commands introduction](./minikube_installation_and_intro_k8s/K8s_commands.md)
+
+---
+
+> [Switch Subject](../README.md)

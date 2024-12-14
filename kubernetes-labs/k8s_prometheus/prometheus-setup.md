@@ -6,7 +6,7 @@
 
 ```bash
 fish # curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-ish # chmod 700 get_helm.sh
+fish # chmod 700 get_helm.sh
 fish # ./get_helm.sh
 Downloading https://get.helm.sh/helm-v3.16.3-linux-amd64.tar.gz
 Verifying checksum... Done.
