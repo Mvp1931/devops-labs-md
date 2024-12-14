@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+    name: rc
+    labels:
+        app: nginx
+spec:
+    replicas: 5
+    selector:
+        app: nginx
+    template:
+        metadata:
+            name: nginx
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: container1
+                  image: nginx:latest
+# Name:             firstpod
+# Namespace:        default
+# Priority:         0
+# Service Account:  default
+# Node:             minikube/192.168.49.2
+# Start Time:       Thu, 17 Oct 2024 08:39:38 +0530
+# Labels:           app=nginx
+# Annotations:      <none>
+# Status:           Running
+# IP:               10.244.1.73
+# IPs:
+#   IP:  10.244.1.73
+# Containers:
+#   firstcontainer:
+#     Container ID:   docker://7d633fa8d29b2963847e8df9a0d2d237dae14f8866d1129c72360ac4ce8e8c33
+#     Image:          nginx:latest
+#     Image ID:       docker-pullable://nginx@sha256:d2eb56950b84efe34f966a2b92efb1a1a2ea53e7e93b94cdf45a27cf3cd47fc0
+#     Port:           80/TCP
+#     Host Port:      0/TCP
+#     State:          Running
+#       Started:      Thu, 17 Oct 2024 08:39:41 +0530
+#     Ready:          True
+#     Restart Count:  0
+#     Environment:    <none>
+#     Mounts:
+#       /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-cslln (ro)
+# Conditions:
+#   Type                        Status
+#   PodReadyToStartContainers   True
+#   Initialized                 True
+#   Ready                       True
+#   ContainersReady             True
+#   PodScheduled                True
+# Volumes:
+#   kube-api-access-cslln:
+#     Type:                    Projected (a volume that contains injected data from multiple sources)
+#     TokenExpirationSeconds:  3607
+#     ConfigMapName:           kube-root-ca.crt
+#     ConfigMapOptional:       <nil>
+#     DownwardAPI:             true
+# QoS Class:                   BestEffort
+# Node-Selectors:              <none>
+# Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+#                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+# Events:
+#   Type    Reason     Age   From               Message
+#   ----    ------     ----  ----               -------
+#   Normal  Scheduled  4m4s  default-scheduler  Successfully assigned default/firstpod to minikube
+#   Normal  Pulling    4m3s  kubelet            Pulling image "nginx:latest"
+#   Normal  Pulled     4m1s  kubelet            Successfully pulled image "nginx:latest" in 2.012s (2.012s including waiting). Image size: 191670478 bytes.
+#   Normal  Created    4m1s  kubelet            Created container firstcontainer
+#   Normal  Started    4m1s  kubelet            Started container firstcontainer

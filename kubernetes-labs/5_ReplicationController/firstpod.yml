@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: firstpod
+    labels:
+        app: nginx
+spec:
+    containers:
+        - name: firstcontainer
+          image: nginx:latest
+          ports:
+              - containerPort: 80
+                name: http

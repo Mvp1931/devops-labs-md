@@ -1,0 +1,39 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-deployment
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: nginx
+    template:
+        metadata:
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: nginx-container
+                  image: nginx:latest
+                  ports:
+                      - containerPort: 80
+                  resources:
+                      limits:
+                          memory: "256Mi"
+                          cpu: "500m"
+
+---
+# Service (ClusterIP)
+apiVersion: v1
+kind: Service
+metadata:
+    name: nginx-service
+spec:
+    type: ClusterIP
+    selector:
+        app: nginx
+    ports:
+        - protocol: TCP
+          port: 8080 # This is the port on which the service will be exposed
+          targetPort: 80 # This is the container port (nginx runs on port 80)

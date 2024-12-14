@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: thirddeployment
+    labels:
+        app: nginx
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: nginx
+    template:
+        metadata:
+            name: dpod
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: container
+                  image: nginx:1.26
+                  ports:
+                      - containerPort: 80

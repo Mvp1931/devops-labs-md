@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
+
+#--------------------------------------------------
+# Explanation:
+
+#     apiVersion: v1
+#     Specifies the API version for a Service. v1 is the version used for core resources like Services.
+
+#     kind: Service
+#     Defines the type of resource, which is a Service. Services expose Pods to network traffic and provide load balancing.
+
+#     metadata:
+#     Contains metadata about the Service.
+#         name: nginx-service
+#         The name of the Service, used to identify it in the cluster.
+
+#     spec:
+#     Defines the desired state of the Service.
+
+#         selector:
+#         Selects the Pods to which the Service will route traffic. The selector matches Pods with the label app: nginx.
+
+#         ports:
+#         Defines the ports that the Service will expose.
+#             protocol: TCP
+#             Specifies the protocol used (TCP in this case).
+#             port: 80
+#             The port on which the Service will be exposed.
+#             targetPort: 80
+#             The port on the container to which traffic should be directed. This matches the containerPort specified in the Pod or Deployment.
+
+#         type: NodePort
+#         The type of Service that exposes the application on a specific port of each Node in the cluster. The NodePort will be chosen by Kubernetes from a range (typically 30000-32767).
+
+# Summary:
+
+# This YAML file defines a Service named nginx-service that exposes the Pods labeled app: nginx on port 80 using a NodePort. This allows external traffic to access the nginx application running in the cluster.
+
+#---------------------------------------------------

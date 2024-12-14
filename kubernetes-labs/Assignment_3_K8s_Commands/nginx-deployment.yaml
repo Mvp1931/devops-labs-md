@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-deployment
+spec:
+    replicas: 5
+    selector:
+        matchLabels:
+            app: nginx
+    template:
+        metadata:
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: nginx
+                  image: nginx:latest
+                  resources:
+                      limits:
+                          memory: "128Mi"
+                          cpu: "500m"
+                  ports:
+                      - containerPort: 80
+#---------------------------------------------------------------------
+
+# Explanation:
+
+#     apiVersion: apps/v1
+#     Specifies the API version for a Deployment. The apps/v1 API version is used for resources like Deployments, StatefulSets, and DaemonSets.
+
+#     kind: Deployment
+#     Defines the type of resource, which is a Deployment. Deployments manage a set of identical Pods and ensure the desired number of replicas are running.
+
+#     metadata:
+#     Contains metadata about the Deployment.
+#         name: nginx-deployment
+#         The name of the Deployment, used to identify it in the cluster.
+
+#     spec:
+#     Defines the desired state of the Deployment.
+
+#         replicas: 3
+#         Specifies that 3 replicas (instances) of the Pod should be running at all times.
+
+#         selector:
+#         Defines how the Deployment identifies the Pods it manages.
+#             matchLabels:
+#             Specifies that the Deployment will manage Pods with the label app: nginx.
+
+#         template:
+#         Specifies the template for the Pods that will be created by this Deployment.
+#             metadata:
+#             Contains metadata for the Pods created by this Deployment.
+#                 labels:
+#                 The label app: nginx is applied to all Pods created by this Deployment. It matches the selector to ensure that the Deployment knows which Pods to manage.
+#             spec:
+#             Defines the container(s) that will run in the Pod.
+#                 containers:
+#                 A list of containers to be run.
+#                     name: nginx
+#                     The name of the container.
+#                     image: nginx:latest
+#                     The Docker image to be used for this container (nginx web server).
+#                     ports:
+#                     A list of ports exposed by the container.
+#                         containerPort: 80
+#                         The port on which the container will listen for HTTP traffic.
+
+# Summary:
+
+# This YAML file defines a Deployment named nginx-deployment that will maintain 3 replicas of a Pod running the nginx web server. The Deployment uses a selector to manage Pods labeled app: nginx.
+
+#--------------------------------------------------------------------------------------------

@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: emptydir-demo-app
+spec:
+    selector:
+        matchLabels:
+            app: emptydir-demo-app
+    template:
+        metadata:
+            name: emptydir-demo-app
+            labels:
+                app: emptydir-demo-app
+        spec:
+            replicas: 1
+            containers:
+                - name: emptydir-demo-nginx-1
+                  image: nginx:latest
+                  resources:
+                      limits:
+                          memory: "256Mi"
+                          cpu: "500m"
+                  ports:
+                      - containerPort: 80
+                  volumeMounts:
+                      - name: emptydir-volume
+                        mountPath: /usr/share/nginx/html
+                - name: emptydir-demo-busybox
+                  image: busybox:latest
+                  command:
+                      - sleep
+                      - "1000"
+                  volumeMounts:
+                      - name: emptydir-volume
+                        mountPath: /data
+                        readOnly: false
+                  resources:
+                      limits:
+                          memory: "256Mi"
+                          cpu: "500m"
+            volumes:
+                - name: emptydir-volume
+                  emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: storage-service
+spec:
+    type: NodePort
+    selector:
+        app: emptydir-demo-app
+    ports:
+        - port: 8080
+          targetPort: 80
+          nodePort: 31000

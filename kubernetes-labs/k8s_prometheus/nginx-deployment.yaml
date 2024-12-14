@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: nginx-prometheus-cluster
+    name: nginx-prometheus-cluster
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: nginx-prometheus-cluster
+    template:
+        metadata:
+            labels:
+                app: nginx-prometheus-cluster
+        spec:
+            containers:
+                - image: nginx:latest
+                  name: nginx
+                  resources:
+                      limits:
+                          cpu: 500m
+                          memory: 256Mi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: nginx-prometheus-service
+spec:
+    selector:
+        app: nginx-prometheus-cluster
+    ports:
+        - port: 8080
+          targetPort: 80

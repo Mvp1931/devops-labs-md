@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: firstpod
+    labels:
+        app: nginx
+spec:
+    containers:
+        - name: firstcontainer
+          image: nginx:latest
+          env:
+              - name: fname
+                value: mihir
+              - name: lname
+                value: phadnis

@@ -1,0 +1,23 @@
+Name:         firstrc
+Namespace:    default
+Selector:     app=myapp
+Labels:       name=firstrc
+Annotations:  <none>
+Replicas:     2 current / 2 desired
+Pods Status:  2 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=myapp
+  Containers:
+   firstcontainer:
+    Image:         nginx:latest
+    Port:          80/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Events:
+  Type    Reason            Age   From                    Message
+  ----    ------            ----  ----                    -------
+  Normal  SuccessfulCreate  88s   replication-controller  Created pod: firstrc-2mjr4

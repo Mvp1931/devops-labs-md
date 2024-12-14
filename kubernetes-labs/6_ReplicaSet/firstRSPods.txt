@@ -1,0 +1,108 @@
+Name:             pod5
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 Nov 2024 10:38:25 +0530
+Labels:           app=myapp
+                  type=frontend
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.90
+IPs:
+  IP:  10.244.0.90
+Containers:
+  myapp1-container:
+    Container ID:   docker://1d52945f0362cbf91d5f95830b4b1eb5b26fb5f2cdc46eaaeb89b5ba90f26bdb
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:bc5eac5eafc581aeda3008b4b1f07ebba230de2f27d47767129a6a905c84f470
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 16 Nov 2024 10:38:29 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-m6kgc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-m6kgc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m42s  default-scheduler  Successfully assigned default/pod5 to minikube
+  Normal  Pulling    3m42s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     3m39s  kubelet            Successfully pulled image "nginx:latest" in 3.011s (3.011s including waiting). Image size: 191670156 bytes.
+  Normal  Created    3m39s  kubelet            Created container myapp1-container
+  Normal  Started    3m39s  kubelet            Started container myapp1-container
+
+
+Name:             pod6
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 16 Nov 2024 10:38:29 +0530
+Labels:           app=myapp
+                  type=backend
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.91
+IPs:
+  IP:  10.244.0.91
+Containers:
+  myapp1-container:
+    Container ID:   docker://628ace0b49e15a6f516dbbc55d5411c03a6f2151df2b8db022c3bb0e101faf07
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:bc5eac5eafc581aeda3008b4b1f07ebba230de2f27d47767129a6a905c84f470
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 16 Nov 2024 10:38:33 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-m87j8 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-m87j8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m38s  default-scheduler  Successfully assigned default/pod6 to minikube
+  Normal  Pulling    3m38s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     3m35s  kubelet            Successfully pulled image "nginx:latest" in 2.732s (2.732s including waiting). Image size: 191670156 bytes.
+  Normal  Created    3m35s  kubelet            Created container myapp1-container
+  Normal  Started    3m35s  kubelet            Started container myapp1-container

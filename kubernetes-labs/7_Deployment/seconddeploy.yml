@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: myapp
+    labels:
+        app: nginx
+spec:
+    selector:
+        matchLabels:
+            app: nginx
+    replicas: 10
+    minReadySeconds: 30
+    strategy:
+        rollingUpdate:
+            maxSurge: 25%
+            maxUnavailable: 25%
+        type: RollingUpdate
+    template:
+        metadata:
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: myapp
+                  image: nginx:stable

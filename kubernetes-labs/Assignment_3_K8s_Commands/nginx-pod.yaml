@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx-pod
+    labels:
+        name: nginx
+spec:
+    containers:
+        - name: nginx
+          image: nginx:latest
+          resources:
+              limits:
+                  memory: "128Mi"
+                  cpu: "500m"
+          ports:
+              - containerPort: 80
+#-------------------------------------
+
+# Explanation:
+
+#     apiVersion: v1
+#     This specifies the API version of the Kubernetes resource you're defining. In this case, v1 is the version for core Kubernetes objects like Pods, ConfigMaps, and Services.
+
+#     kind: Pod
+#     This specifies the type of resource you are creating. Here, it is a Pod, which is the smallest deployable unit in Kubernetes.
+
+#     metadata:
+#     Contains metadata about the Pod, such as its name and labels.
+#         name: nginx-pod
+#         The name of the Pod. This is how you identify the Pod in the cluster.
+#         labels:
+#         A set of key-value pairs used to identify and group related resources.
+#             app: nginx
+#             A label used to categorize this Pod as part of the nginx app. Labels are useful for managing and selecting objects in a Kubernetes cluster.
+
+#     spec:
+#     Defines the desired state of the Pod. This is where you specify the containers that make up the Pod.
+#         containers:
+#         A list of containers that run in the Pod.
+#             name: nginx
+#             The name of the container. This name must be unique within the Pod.
+#             image: nginx:latest
+#             The Docker image to be used for this container. In this case, it's the nginx image, tagged with latest.
+#             ports:
+#             A list of ports exposed by the container.
+#                 containerPort: 80
+#                 The port on which the container will listen for HTTP traffic. This is the default port for the nginx web server.
+
+#---------------------------------------------------------------------------------------
+# Summary:
+
+# This YAML file defines a single Pod named nginx-pod that runs an nginx web server container, exposing port 80.
+#----------------------------------------------------------------------
+
+# Commands to deploy the Pod

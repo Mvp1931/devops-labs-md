@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    creationTimestamp: "2024-11-16T07:56:06Z"
+    generation: 1
+    labels:
+        app: mydeployment
+    name: mydeployment
+spec:
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+        matchLabels:
+            app: mydeployment
+    strategy:
+        rollingUpdate:
+            maxSurge: 25%
+            maxUnavailable: 25%
+        type: RollingUpdate
+    template:
+        metadata:
+            labels:
+                app: mydeployment
+        spec:
+            containers:
+                - image: nginx:1.27
+                  imagePullPolicy: IfNotPresent
+                  name: nginx
