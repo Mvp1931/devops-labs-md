@@ -228,7 +228,7 @@ Terraform used the selected providers to generate the following execution plan. 
       + max_bid_price                                          = -1
       + name                                                   = "newLinuxVM"
       + network_interface_ids                                  = [
-          + "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
+          + "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
         ]
       + patch_assessment_mode                                  = "ImageDefault"
       + patch_mode                                             = "ImageDefault"
@@ -402,7 +402,7 @@ azurerm_linux_virtual_machine.vm: Still creating... [10s elapsed]
 azurerm_linux_virtual_machine.vm: Still creating... [20s elapsed]
 azurerm_linux_virtual_machine.vm: Still creating... [30s elapsed]
 azurerm_linux_virtual_machine.vm: Still creating... [40s elapsed]
-azurerm_linux_virtual_machine.vm: Creation complete after 48s [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
+azurerm_linux_virtual_machine.vm: Creation complete after 48s [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
@@ -432,13 +432,13 @@ resource "azurerm_linux_virtual_machine" "vm" {
     encryption_at_host_enabled                             = false
     eviction_policy                                        = null
     extensions_time_budget                                 = "PT1H30M"
-    id                                                     = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM"
+    id                                                     = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM"
     license_type                                           = null
     location                                               = "centralindia"
     max_bid_price                                          = -1
     name                                                   = "newLinuxVM"
     network_interface_ids                                  = [
-        "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
+        "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
     ]
     patch_assessment_mode                                  = "ImageDefault"
     patch_mode                                             = "ImageDefault"
@@ -493,7 +493,7 @@ resource "azurerm_network_interface" "network_interface" {
     auxiliary_sku                  = null
     dns_servers                    = []
     edge_zone                      = null
-    id                             = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface"
+    id                             = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface"
     internal_dns_name_label        = null
     internal_domain_name_suffix    = "sy0h3fzy4iquvnbbvxjcirjlxe.rx.internal.cloudapp.net"
     ip_forwarding_enabled          = false
@@ -515,14 +515,14 @@ resource "azurerm_network_interface" "network_interface" {
         private_ip_address                                 = "10.0.1.4"
         private_ip_address_allocation                      = "Dynamic"
         private_ip_address_version                         = "IPv4"
-        public_ip_address_id                               = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP"
-        subnet_id                                          = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+        public_ip_address_id                               = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP"
+        subnet_id                                          = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
     }
 }
 
 # azurerm_network_security_group.nsg:
 resource "azurerm_network_security_group" "nsg" {
-    id                  = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
+    id                  = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
     location            = "centralindia"
     name                = "newNetworkSecurityGroup"
     resource_group_name = "newTFResourceGroup"
@@ -554,7 +554,7 @@ resource "azurerm_public_ip" "public_ip" {
     allocation_method       = "Static"
     ddos_protection_mode    = "VirtualNetworkInherited"
     edge_zone               = null
-    id                      = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP"
+    id                      = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP"
     idle_timeout_in_minutes = 4
     ip_address              = "52.172.194.118"
     ip_tags                 = {}
@@ -570,7 +570,7 @@ resource "azurerm_public_ip" "public_ip" {
 
 # azurerm_resource_group.rg:
 resource "azurerm_resource_group" "rg" {
-    id         = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup"
+    id         = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup"
     location   = "centralindia"
     managed_by = null
     name       = "newTFResourceGroup"
@@ -583,7 +583,7 @@ resource "azurerm_subnet" "subnet" {
         "10.0.1.0/24",
     ]
     default_outbound_access_enabled               = true
-    id                                            = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+    id                                            = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
     name                                          = "newSubnet"
     private_endpoint_network_policies             = "Disabled"
     private_link_service_network_policies_enabled = true
@@ -595,9 +595,9 @@ resource "azurerm_subnet" "subnet" {
 
 # azurerm_subnet_network_security_group_association.nsg_association:
 resource "azurerm_subnet_network_security_group_association" "nsg_association" {
-    id                        = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
-    network_security_group_id = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
-    subnet_id                 = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+    id                        = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+    network_security_group_id = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
+    subnet_id                 = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
 }
 
 # azurerm_virtual_network.vnet:
@@ -610,7 +610,7 @@ resource "azurerm_virtual_network" "vnet" {
     edge_zone               = null
     flow_timeout_in_minutes = 0
     guid                    = "977e3496-f238-4a21-b421-add224452bbc"
-    id                      = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet"
+    id                      = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet"
     location                = "centralindia"
     name                    = "newVnet"
     resource_group_name     = "newTFResourceGroup"
@@ -621,12 +621,12 @@ resource "azurerm_virtual_network" "vnet" {
             ]
             default_outbound_access_enabled               = true
             delegation                                    = []
-            id                                            = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+            id                                            = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
             name                                          = "newSubnet"
             private_endpoint_network_policies             = "Disabled"
             private_link_service_network_policies_enabled = true
             route_table_id                                = null
-            security_group                                = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
+            security_group                                = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
             service_endpoint_policy_ids                   = []
             service_endpoints                             = []
         },
@@ -721,14 +721,14 @@ var.resource_group_name
 
   Enter a value: newTFResourceGroup
 
-azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup]
-azurerm_public_ip.public_ip: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP]
-azurerm_network_security_group.nsg: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup]
-azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet]
-azurerm_subnet.subnet: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
-azurerm_subnet_network_security_group_association.nsg_association: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
-azurerm_network_interface.network_interface: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface]
-azurerm_linux_virtual_machine.vm: Refreshing state... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
+azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup]
+azurerm_public_ip.public_ip: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP]
+azurerm_network_security_group.nsg: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup]
+azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet]
+azurerm_subnet.subnet: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
+azurerm_subnet_network_security_group_association.nsg_association: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
+azurerm_network_interface.network_interface: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface]
+azurerm_linux_virtual_machine.vm: Refreshing state... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   - destroy
@@ -745,12 +745,12 @@ Terraform will perform the following actions:
       - disable_password_authentication                        = false -> null
       - encryption_at_host_enabled                             = false -> null
       - extensions_time_budget                                 = "PT1H30M" -> null
-      - id                                                     = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM" -> null
+      - id                                                     = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM" -> null
       - location                                               = "centralindia" -> null
       - max_bid_price                                          = -1 -> null
       - name                                                   = "newLinuxVM" -> null
       - network_interface_ids                                  = [
-          - "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
+          - "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface",
         ] -> null
       - patch_assessment_mode                                  = "ImageDefault" -> null
       - patch_mode                                             = "ImageDefault" -> null
@@ -796,7 +796,7 @@ Terraform will perform the following actions:
       - accelerated_networking_enabled = false -> null
       - applied_dns_servers            = [] -> null
       - dns_servers                    = [] -> null
-      - id                             = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface" -> null
+      - id                             = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface" -> null
       - internal_domain_name_suffix    = "sy0h3fzy4iquvnbbvxjcirjlxe.rx.internal.cloudapp.net" -> null
       - ip_forwarding_enabled          = false -> null
       - location                       = "centralindia" -> null
@@ -808,7 +808,7 @@ Terraform will perform the following actions:
         ] -> null
       - resource_group_name            = "newTFResourceGroup" -> null
       - tags                           = {} -> null
-      - virtual_machine_id             = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM" -> null
+      - virtual_machine_id             = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM" -> null
         # (4 unchanged attributes hidden)
 
       - ip_configuration {
@@ -817,15 +817,15 @@ Terraform will perform the following actions:
           - private_ip_address                                 = "10.0.1.4" -> null
           - private_ip_address_allocation                      = "Dynamic" -> null
           - private_ip_address_version                         = "IPv4" -> null
-          - public_ip_address_id                               = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP" -> null
-          - subnet_id                                          = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
+          - public_ip_address_id                               = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP" -> null
+          - subnet_id                                          = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
             # (1 unchanged attribute hidden)
         }
     }
 
   # azurerm_network_security_group.nsg will be destroyed
   - resource "azurerm_network_security_group" "nsg" {
-      - id                  = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup" -> null
+      - id                  = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup" -> null
       - location            = "centralindia" -> null
       - name                = "newNetworkSecurityGroup" -> null
       - resource_group_name = "newTFResourceGroup" -> null
@@ -856,7 +856,7 @@ Terraform will perform the following actions:
   - resource "azurerm_public_ip" "public_ip" {
       - allocation_method       = "Static" -> null
       - ddos_protection_mode    = "VirtualNetworkInherited" -> null
-      - id                      = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP" -> null
+      - id                      = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP" -> null
       - idle_timeout_in_minutes = 4 -> null
       - ip_address              = "52.172.194.118" -> null
       - ip_tags                 = {} -> null
@@ -873,7 +873,7 @@ Terraform will perform the following actions:
 
   # azurerm_resource_group.rg will be destroyed
   - resource "azurerm_resource_group" "rg" {
-      - id         = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup" -> null
+      - id         = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup" -> null
       - location   = "centralindia" -> null
       - name       = "newTFResourceGroup" -> null
       - tags       = {} -> null
@@ -886,7 +886,7 @@ Terraform will perform the following actions:
           - "10.0.1.0/24",
         ] -> null
       - default_outbound_access_enabled               = true -> null
-      - id                                            = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
+      - id                                            = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
       - name                                          = "newSubnet" -> null
       - private_endpoint_network_policies             = "Disabled" -> null
       - private_link_service_network_policies_enabled = true -> null
@@ -898,9 +898,9 @@ Terraform will perform the following actions:
 
   # azurerm_subnet_network_security_group_association.nsg_association will be destroyed
   - resource "azurerm_subnet_network_security_group_association" "nsg_association" {
-      - id                        = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
-      - network_security_group_id = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup" -> null
-      - subnet_id                 = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
+      - id                        = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
+      - network_security_group_id = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup" -> null
+      - subnet_id                 = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet" -> null
     }
 
   # azurerm_virtual_network.vnet will be destroyed
@@ -911,7 +911,7 @@ Terraform will perform the following actions:
       - dns_servers             = [] -> null
       - flow_timeout_in_minutes = 0 -> null
       - guid                    = "977e3496-f238-4a21-b421-add224452bbc" -> null
-      - id                      = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet" -> null
+      - id                      = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet" -> null
       - location                = "centralindia" -> null
       - name                    = "newVnet" -> null
       - resource_group_name     = "newTFResourceGroup" -> null
@@ -922,11 +922,11 @@ Terraform will perform the following actions:
                 ]
               - default_outbound_access_enabled               = true
               - delegation                                    = []
-              - id                                            = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
+              - id                                            = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet"
               - name                                          = "newSubnet"
               - private_endpoint_network_policies             = "Disabled"
               - private_link_service_network_policies_enabled = true
-              - security_group                                = "/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
+              - security_group                                = "/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup"
               - service_endpoint_policy_ids                   = []
               - service_endpoints                             = []
                 # (1 unchanged attribute hidden)
@@ -947,29 +947,29 @@ Do you really want to destroy all resources?
 
   Enter a value: yes
 
-azurerm_subnet_network_security_group_association.nsg_association: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
-azurerm_linux_virtual_machine.vm: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
+azurerm_subnet_network_security_group_association.nsg_association: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
+azurerm_linux_virtual_machine.vm: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Compute/virtualMachines/newLinuxVM]
 azurerm_subnet_network_security_group_association.nsg_association: Destruction complete after 4s
-azurerm_network_security_group.nsg: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup]
+azurerm_network_security_group.nsg: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkSecurityGroups/newNetworkSecurityGroup]
 azurerm_linux_virtual_machine.vm: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...oft.Compute/virtualMachines/newLinuxVM, 10s elapsed]
 azurerm_network_security_group.nsg: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...SecurityGroups/newNetworkSecurityGroup, 10s elapsed]
 azurerm_network_security_group.nsg: Destruction complete after 10s
 azurerm_linux_virtual_machine.vm: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...oft.Compute/virtualMachines/newLinuxVM, 20s elapsed]
 azurerm_linux_virtual_machine.vm: Destruction complete after 28s
-azurerm_network_interface.network_interface: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface]
+azurerm_network_interface.network_interface: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/networkInterfaces/newNetworkInterface]
 azurerm_network_interface.network_interface: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-.../networkInterfaces/newNetworkInterface, 10s elapsed]
 azurerm_network_interface.network_interface: Destruction complete after 11s
-azurerm_subnet.subnet: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
-azurerm_public_ip.public_ip: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP]
+azurerm_subnet.subnet: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet/subnets/newSubnet]
+azurerm_public_ip.public_ip: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/publicIPAddresses/newPublicIP]
 azurerm_public_ip.public_ip: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-....Network/publicIPAddresses/newPublicIP, 10s elapsed]
 azurerm_subnet.subnet: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...tualNetworks/newVnet/subnets/newSubnet, 10s elapsed]
 azurerm_subnet.subnet: Destruction complete after 11s
-azurerm_virtual_network.vnet: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet]
+azurerm_virtual_network.vnet: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup/providers/Microsoft.Network/virtualNetworks/newVnet]
 azurerm_public_ip.public_ip: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-....Network/publicIPAddresses/newPublicIP, 20s elapsed]
 azurerm_virtual_network.vnet: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...rosoft.Network/virtualNetworks/newVnet, 10s elapsed]
 azurerm_public_ip.public_ip: Destruction complete after 22s
 azurerm_virtual_network.vnet: Destruction complete after 11s
-azurerm_resource_group.rg: Destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-bfaba37d28ad/resourceGroups/newTFResourceGroup]
+azurerm_resource_group.rg: Destroying... [id=/subscriptions/bec****************************ad/resourceGroups/newTFResourceGroup]
 azurerm_resource_group.rg: Still destroying... [id=/subscriptions/bec96e6b-8cfc-4a7b-87bf-...28ad/resourceGroups/newTFResourceGroup, 10s elapsed]
 azurerm_resource_group.rg: Destruction complete after 18s
 
