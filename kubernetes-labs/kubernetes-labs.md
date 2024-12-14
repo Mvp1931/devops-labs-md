@@ -15,3 +15,9 @@
 13. [Monitoring with Prometheus](./k8s_prometheus/prometheus-setup.md)
 14. [efk-stack](./k8s_efk/efk.md)
 15. [etcd-operator](./k8s_etcd/etcd-lab.md)
+
+---
+
+16. [Minikube installation](./minikube_installation_and_intro_k8s/K8s_Installation.md)
+17. [Kubernetes Architecture](./minikube_installation_and_intro_k8s/K8s_architecture.md)
+18. [Kubernetes Commands introduction](./minikube_installation_and_intro_k8s/K8s_commands.md)
