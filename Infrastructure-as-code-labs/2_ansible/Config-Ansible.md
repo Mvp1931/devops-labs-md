@@ -11,7 +11,7 @@
 
 > For this assignment, I am using my **Ubuntu 24.04 WSL2** machine as the control node.
 
-> And for the Manged host, I am creating an _Azure VM_ with **Ubuntu 24.04 server** OS.
+> And for the Manged host, I am creating an _Azure VM_ with **Ubuntu 22.04 server** OS.
 
 ---
 
