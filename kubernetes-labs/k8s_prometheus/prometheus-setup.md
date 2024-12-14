@@ -1,3 +1,5 @@
+> [Go To home](../kubernetes-labs.md)
+
 # Assignment - Monitor Kubernetes cluster using Prometheus
 
 ## Install Helm on your local machine

@@ -1,3 +1,5 @@
+> [Go To home](../kubernetes-labs.md)
+
 # EFK Stack for Kubernetes Logging
 
 The EFK stack is a popular combination of tools for collecting, aggregating, and analyzing logs in Kubernetes:
